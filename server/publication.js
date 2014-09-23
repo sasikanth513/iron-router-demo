@@ -11,3 +11,9 @@ function insertFunc(){
 Meteor.publish('time',function(skipCount){
    return time.find({},{sort: {presentDate: -1},limit:20,skip:skipCount}) ;
 });
+
+Meteor.methods({
+    'totalRecords':function(){
+        return time.find({}).count();
+    }
+});
