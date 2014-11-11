@@ -1,7 +1,7 @@
 Meteor.startup(function () {
     Session.setDefault("skipCount",0);
     Session.setDefault("totalCount",0);
-    updateCount();
+    // updateCount();
     AccountsEntry.config({
       homeRoute: '/',          
       dashboardRoute: '/',
